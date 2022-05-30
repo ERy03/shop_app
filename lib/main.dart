@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
       title: 'MyShop',
       theme: ThemeData(
         brightness: Brightness.dark,
+        fontFamily: "Lato",
       ),
       home: ProductsOverviewScreen(),
     );
