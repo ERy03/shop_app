@@ -16,6 +16,7 @@ class ProductItem extends StatelessWidget {
         backgroundColor: Colors.black54,
         leading: IconButton(
           icon: const Icon(Icons.favorite),
+          color: Theme.of(context).colorScheme.secondary,
           onPressed: () => print("favorite"),
         ),
         title: Text(
@@ -24,6 +25,7 @@ class ProductItem extends StatelessWidget {
         ),
         trailing: IconButton(
           icon: const Icon(Icons.shopping_cart),
+          color: Theme.of(context).colorScheme.secondary,
           onPressed: () => print("shopping cart"),
         ),
       ),
