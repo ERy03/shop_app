@@ -51,10 +51,10 @@ class ProductsOverviewScreen extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         itemCount: loadedProducts.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+          crossAxisCount: 2, // Control how many items you want across the grid
           childAspectRatio: 3 / 2,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
+          crossAxisSpacing: 10, // vertical space between columns
+          mainAxisSpacing: 10, // Horizontal space between rows
         ),
         itemBuilder: (context, index) => Container(),
       ),
