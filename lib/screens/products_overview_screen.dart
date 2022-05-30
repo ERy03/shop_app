@@ -52,13 +52,17 @@ class ProductsOverviewScreen extends StatelessWidget {
       body: GridView.builder(
         padding: const EdgeInsets.all(10.0),
         itemCount: loadedProducts.length,
+        itemBuilder: (context, index) => ProductItem(
+          id: loadedProducts[index].id,
+          title: loadedProducts[index].title,
+          imageUrl: loadedProducts[index].imageUrl,
+        ),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, // Control how many items you want across the grid
           childAspectRatio: 3 / 2,
           crossAxisSpacing: 10, // vertical space between columns
           mainAxisSpacing: 10, // Horizontal space between rows
         ),
-        itemBuilder: (context, index) => ProductItem(),
       ),
     );
   }
