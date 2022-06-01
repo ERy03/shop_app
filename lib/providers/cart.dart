@@ -48,5 +48,6 @@ class Cart with ChangeNotifier {
                 quantity: 1,
               ));
     }
+    notifyListeners();
   }
 }
