@@ -31,7 +31,7 @@ class CartScreen extends StatelessWidget {
                     label: Text(
                       "\$${cart.totalAmount}",
                     ),
-                    backgroundColor: Theme.of(context).colorScheme.secondary,
+                    backgroundColor: Theme.of(context).primaryColorLight,
                   ),
                   TextButton(
                     onPressed: () {},
@@ -44,7 +44,16 @@ class CartScreen extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: cart.items.length,
+              itemBuilder: (context, index) => ,
+            ),
+          ),
         ],
       ),
     );
