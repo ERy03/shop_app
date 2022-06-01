@@ -37,10 +37,11 @@ class ProductItem extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           trailing: IconButton(
-            icon: const Icon(Icons.shopping_cart),
-            color: Theme.of(context).colorScheme.secondary,
-            onPressed: () => print("shopping cart"),
-          ),
+              icon: const Icon(Icons.shopping_cart),
+              color: Theme.of(context).colorScheme.secondary,
+              onPressed: () {
+                cart.addItem(product.id, product.price, product.title);
+              }),
         ),
         child: GestureDetector(
           onTap: () => Navigator.of(context).pushNamed(
