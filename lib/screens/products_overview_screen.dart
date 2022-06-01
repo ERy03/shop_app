@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../widgets/products_grid.dart';
 
+enum FilterOptions {
+  Favorites,
+  All,
+}
+
 class ProductsOverviewScreen extends StatelessWidget {
   const ProductsOverviewScreen({Key? key}) : super(key: key);
 
@@ -12,17 +17,17 @@ class ProductsOverviewScreen extends StatelessWidget {
         title: const Text("MyShop"),
         actions: <Widget>[
           PopupMenuButton(
-            onSelected: (int selectedValue) {
+            onSelected: (FilterOptions selectedValue) {
               print(selectedValue);
             },
             icon: const Icon(Icons.more_vert),
             itemBuilder: (_) => [
               const PopupMenuItem(
-                value: 0,
+                value: FilterOptions.Favorites,
                 child: Text("Only Favorites"),
               ),
               const PopupMenuItem(
-                value: 1,
+                value: FilterOptions.All,
                 child: Text("Show All"),
               ),
             ],
