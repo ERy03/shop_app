@@ -7,9 +7,14 @@ enum FilterOptions {
   All,
 }
 
-class ProductsOverviewScreen extends StatelessWidget {
+class ProductsOverviewScreen extends StatefulWidget {
   const ProductsOverviewScreen({Key? key}) : super(key: key);
 
+  @override
+  State<ProductsOverviewScreen> createState() => _ProductsOverviewScreenState();
+}
+
+class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
