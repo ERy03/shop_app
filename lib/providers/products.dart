@@ -62,6 +62,15 @@ class Products with ChangeNotifier {
       imageUrl:
           'https://images.unsplash.com/photo-1589320153203-6fef035a72a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1998&q=80',
     ),
+    Product(
+      id: 'p8',
+      title: 'Perfume',
+      description:
+          'Lorem ipsum dolor sit amet. Et voluptate quibusdam qui officia quae est rerum cumque qui nihil vitae ea quia nobis ea deserunt enim quo provident quam. Non laborum molestias id esse consectetur et doloremque sint nam nulla eligendi vel quisquam nisi. Aut aliquid sequi sit sint repudiandae ea voluptatibus quasi 33 facilis enim et voluptatem voluptatem ut iusto voluptate cum expedita sint?',
+      price: 149.99,
+      imageUrl:
+          'https://images.unsplash.com/photo-1589820832079-9a215961bc96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80',
+    ),
   ];
 
   List<Product> get items {
