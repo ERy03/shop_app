@@ -14,7 +14,9 @@ class OrderItem extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ListTile(
-            title: Text("\$${order.amount}"),
+            title: Text(
+              "\$${num.parse(order.amount.toStringAsFixed(2))}",
+            ),
             subtitle: Text(
               DateFormat('dd MM yyyy hh:mm').format(order.dateTime),
             ),
