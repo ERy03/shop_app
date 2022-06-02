@@ -36,11 +36,21 @@ class _OrderItemState extends State<OrderItem> {
               icon: Icon(_expanded ? Icons.expand_less : Icons.expand_more),
             ),
           ),
-          // if(_expanded)
-          //   Container(
-          //     height: min(widget.order.products.length * 20.0 + 100, 180),
-          //     child: ListView(children: []),
-          // );
+          if (_expanded)
+            Container(
+              height: min(widget.order.products.length * 20.0 + 100, 180),
+              child: ListView(
+                children: widget.order.products
+                    .map(
+                      (prod) => Row(
+                        children: <Widget>[
+                          Text(prod.title),
+                        ],
+                      ),
+                    )
+                    .toList(),
+              ),
+            ),
         ],
       ),
     );
