@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 import '../providers/orders.dart' as ord;
 import 'package:intl/intl.dart';
 
-class OrderItem extends StatelessWidget {
+class OrderItem extends StatefulWidget {
   final ord.OrderItem order;
 
   OrderItem(this.order);
 
+  @override
+  State<OrderItem> createState() => _OrderItemState();
+}
+
+class _OrderItemState extends State<OrderItem> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -15,10 +20,10 @@ class OrderItem extends StatelessWidget {
         children: <Widget>[
           ListTile(
             title: Text(
-              "\$${num.parse(order.amount.toStringAsFixed(2))}",
+              "\$${num.parse(widget.order.amount.toStringAsFixed(2))}",
             ),
             subtitle: Text(
-              DateFormat('MMM dd yyyy h:mm a').format(order.dateTime),
+              DateFormat('MMM dd yyyy h:mm a').format(widget.order.dateTime),
             ),
             trailing: IconButton(
               onPressed: () {},
