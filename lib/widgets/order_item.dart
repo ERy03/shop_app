@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import '../providers/orders.dart' as ord;
 
 class OrderItem extends StatelessWidget {
-  const OrderItem({Key? key}) : super(key: key);
+  final ord.OrderItem order;
+
+  OrderItem(this.order);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +13,7 @@ class OrderItem extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ListTile(
-            title: Text("\$${}"),
+            title: Text("\$${order.amount}"),
           )
         ],
       ),
