@@ -35,8 +35,11 @@ class _OrderItemState extends State<OrderItem> {
               },
               icon: Icon(_expanded ? Icons.expand_less : Icons.expand_more),
             ),
-          )
-          if(_expanded) Container(height: ,);
+          ),
+          if(_expanded)
+            Container(
+              height: min(widget.order.products.length * 20.0 + 100, 180),
+          );
         ],
       ),
     );
