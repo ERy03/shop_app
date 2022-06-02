@@ -36,5 +36,6 @@ class Orders with ChangeNotifier {
         dateTime: DateTime.now(),
       ),
     );
+    notifyListeners();
   }
 }
