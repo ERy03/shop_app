@@ -26,6 +26,7 @@ class CartItem extends StatelessWidget {
           color: Colors.white,
           size: 40,
         ),
+        alignment: Alignment.centerRight,
       ),
       child: Card(
         margin: const EdgeInsets.symmetric(
