@@ -45,6 +45,8 @@ class ProductDetailScreen extends StatelessWidget {
             ),
             Text(
               loadedProduct.description,
+              textAlign: TextAlign.center,
+              softWrap: true,
             ),
           ],
         ),
