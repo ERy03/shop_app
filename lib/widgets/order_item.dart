@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../providers/orders.dart' as ord;
+import 'package:intl/intl.dart';
 
 class OrderItem extends StatelessWidget {
   final ord.OrderItem order;
@@ -9,12 +10,14 @@ class OrderItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(10.0),
       child: Column(
         children: <Widget>[
           ListTile(
             title: Text("\$${order.amount}"),
-            subtitle: Text(),
+            subtitle: Text(
+              DateFormat('dd MM yyyy hh:mm').format(order.dateTime),
+            ),
           )
         ],
       ),
