@@ -32,7 +32,7 @@ class _OrderItemState extends State<OrderItem> {
                   _expanded = !_expanded;
                 });
               },
-              icon: const Icon(Icons.expand_more),
+              icon: Icon(_expanded ? Icons.expand_less : Icons.expand_more),
             ),
           )
         ],
