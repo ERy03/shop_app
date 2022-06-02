@@ -12,6 +12,14 @@ class AppDrawer extends StatelessWidget {
             title: const Text('Hello Friend!'),
             automaticallyImplyLeading: false,
           ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.shop),
+            title: const Text("Shop"),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed('/');
+            },
+          ),
         ],
       ),
     );
