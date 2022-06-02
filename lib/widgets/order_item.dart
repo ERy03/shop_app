@@ -51,6 +51,7 @@ class _OrderItemState extends State<OrderItem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                          Text("${prod.quantity}x \$${prod.price}")
                         ],
                       ),
                     )
