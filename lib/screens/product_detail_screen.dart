@@ -30,6 +30,9 @@ class ProductDetailScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),
