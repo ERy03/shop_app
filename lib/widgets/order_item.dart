@@ -27,7 +27,11 @@ class _OrderItemState extends State<OrderItem> {
               DateFormat('MMM dd yyyy h:mm a').format(widget.order.dateTime),
             ),
             trailing: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  _expanded = !_expanded;
+                });
+              },
               icon: const Icon(Icons.expand_more),
             ),
           )
