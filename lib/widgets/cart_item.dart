@@ -33,6 +33,7 @@ class CartItem extends StatelessWidget {
           size: 40,
         ),
       ),
+      direction: DismissDirection.endToStart,
       child: Card(
         margin: const EdgeInsets.symmetric(
           horizontal: 15,
