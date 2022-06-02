@@ -44,7 +44,13 @@ class _OrderItemState extends State<OrderItem> {
                     .map(
                       (prod) => Row(
                         children: <Widget>[
-                          Text(prod.title),
+                          Text(
+                            prod.title,
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ],
                       ),
                     )
