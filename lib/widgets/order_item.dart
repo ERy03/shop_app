@@ -43,6 +43,7 @@ class _OrderItemState extends State<OrderItem> {
                 children: widget.order.products
                     .map(
                       (prod) => Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
                             prod.title,
