@@ -4,5 +4,16 @@ class AppDrawer extends StatelessWidget {
   const AppDrawer({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {}
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: Column(
+        children: <Widget>[
+          AppBar(
+            title: const Text('Hello Friend!'),
+            automaticallyImplyLeading: false,
+          ),
+        ],
+      ),
+    );
+  }
 }
