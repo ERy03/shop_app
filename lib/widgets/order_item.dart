@@ -18,7 +18,7 @@ class OrderItem extends StatelessWidget {
               "\$${num.parse(order.amount.toStringAsFixed(2))}",
             ),
             subtitle: Text(
-              DateFormat('dd MM yyyy hh:mm').format(order.dateTime),
+              DateFormat('yyyy年MM月dd日 hh:mm').format(order.dateTime),
             ),
             trailing: IconButton(
               onPressed: () {},
