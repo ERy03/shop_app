@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
 
 class CartItem extends StatelessWidget {
-  const CartItem(
-      {Key? key,
-      required this.id,
-      required this.price,
-      required this.quantity,
-      required this.title})
-      : super(key: key);
-
   final String id;
+  final String productId;
   final double price;
   final int quantity;
   final String title;
 
+  const CartItem(
+    this.id,
+    this.productId,
+    this.price,
+    this.quantity,
+    this.title,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.symmetric(
+      margin: const EdgeInsets.symmetric(
         horizontal: 15,
         vertical: 4,
       ),
       child: Padding(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: ListTile(
           leading: CircleAvatar(
             child: Text("\$$price"),
