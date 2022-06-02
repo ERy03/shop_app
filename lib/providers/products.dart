@@ -53,6 +53,15 @@ class Products with ChangeNotifier {
       imageUrl:
           'https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80',
     ),
+    Product(
+      id: 'p7',
+      title: 'Blue Car',
+      description:
+          'Lorem ipsum dolor sit amet. Et voluptate quibusdam qui officia quae est rerum cumque qui nihil vitae ea quia nobis ea deserunt enim quo provident quam. Non laborum molestias id esse consectetur et doloremque sint nam nulla eligendi vel quisquam nisi. Aut aliquid sequi sit sint repudiandae ea voluptatibus quasi 33 facilis enim et voluptatem voluptatem ut iusto voluptate cum expedita sint?',
+      price: 119.99,
+      imageUrl:
+          'https://images.unsplash.com/photo-1589320153203-6fef035a72a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1998&q=80',
+    ),
   ];
 
   List<Product> get items {
