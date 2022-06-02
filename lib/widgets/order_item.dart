@@ -35,6 +35,7 @@ class _OrderItemState extends State<OrderItem> {
               icon: Icon(_expanded ? Icons.expand_less : Icons.expand_more),
             ),
           )
+          if(_expanded) Container(height: ,);
         ],
       ),
     );
