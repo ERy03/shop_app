@@ -37,6 +37,22 @@ class Products with ChangeNotifier {
       imageUrl:
           'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
     ),
+    Product(
+      id: 'p5',
+      title: 'Nike Shoe',
+      description: 'Flaming hot color. Your feet will burn.',
+      price: 89.99,
+      imageUrl:
+          'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80',
+    ),
+    Product(
+      id: 'p6',
+      title: 'Dove Body Cream',
+      description: 'Rich nourishment. Baby skin here we come.',
+      price: 19.99,
+      imageUrl:
+          'https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80',
+    ),
   ];
 
   List<Product> get items {
