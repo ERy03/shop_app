@@ -9,7 +9,10 @@ class UserProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(),
+      title: Text(title),
+      leading: CircleAvatar(
+        backgroundImage: NetworkImage(imageUrl),
+      ),
     );
   }
 }
