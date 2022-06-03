@@ -16,11 +16,20 @@ class _EditProductScreenState extends State<EditProductScreen> {
 
   @override
   void dispose() {
+    _imageUrlfocusNode.removeListener(_updateImageUrl);
     _priceFocusNode.dispose();
     _descriptionFocusNode.dispose();
     _imageUrlController.dispose();
     _imageUrlfocusNode.dispose();
     super.dispose();
+  }
+
+  void _updateImageUrl() {}
+
+  @override
+  void initState() {
+    _imageUrlfocusNode.addListener(_updateImageUrl);
+    super.initState();
   }
 
   @override
@@ -110,6 +119,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                         keyboardType: TextInputType.url,
                         textInputAction: TextInputAction.done,
                         controller: _imageUrlController,
+                        focusNode: _imageUrlfocusNode,
                       ),
                     ),
                   ],
