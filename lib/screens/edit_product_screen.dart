@@ -29,6 +29,15 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   ),
                   textInputAction: TextInputAction.next,
                 ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    labelText: "Price",
+                    labelStyle: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary),
+                  ),
+                  textInputAction: TextInputAction.next,
+                  keyboardType: TextInputType.number,
+                ),
               ],
             ),
           ),
