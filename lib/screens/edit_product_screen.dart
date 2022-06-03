@@ -13,6 +13,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
   final _descriptionFocusNode = FocusNode();
   final _imageUrlController = TextEditingController();
   final _imageUrlfocusNode = FocusNode();
+  final _form = GlobalKey<FormState>();
 
   @override
   void dispose() {
@@ -30,6 +31,8 @@ class _EditProductScreenState extends State<EditProductScreen> {
     }
   }
 
+  void _saveForm() {}
+
   @override
   void initState() {
     _imageUrlfocusNode.addListener(_updateImageUrl);
@@ -41,10 +44,19 @@ class _EditProductScreenState extends State<EditProductScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Edit Product"),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {
+              _saveForm();
+            },
+            icon: const Icon(Icons.save),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
+          key: _form,
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -79,17 +91,6 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   keyboardType: TextInputType.multiline,
                   focusNode: _descriptionFocusNode,
                 ),
-                // Expanded(
-                //     child: TextFormField(
-                //   decoration: InputDecoration(labelText: 'Image URL'),
-                //   keyboardType: TextInputType.url,
-                //   textInputAction: TextInputAction.done,
-                //   controller: _imageUrlController,
-                //   onEditingComplete: () {
-                //     setState(() {});
-                //   },
-                //  ),
-                // ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
@@ -124,6 +125,9 @@ class _EditProductScreenState extends State<EditProductScreen> {
                         textInputAction: TextInputAction.done,
                         controller: _imageUrlController,
                         focusNode: _imageUrlfocusNode,
+                        onFieldSubmitted: (_) {
+                          _saveForm();
+                        },
                       ),
                     ),
                   ],
