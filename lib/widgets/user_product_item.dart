@@ -19,6 +19,10 @@ class UserProductItem extends StatelessWidget {
             onPressed: () {},
             icon: const Icon(Icons.edit),
           ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.delete),
+          ),
         ],
       ),
     );
