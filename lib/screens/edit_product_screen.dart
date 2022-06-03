@@ -12,12 +12,14 @@ class _EditProductScreenState extends State<EditProductScreen> {
   final _priceFocusNode = FocusNode();
   final _descriptionFocusNode = FocusNode();
   final _imageUrlController = TextEditingController();
+  final _imageUrlfocusNode = FocusNode();
 
   @override
   void dispose() {
     _priceFocusNode.dispose();
     _descriptionFocusNode.dispose();
     _imageUrlController.dispose();
+    _imageUrlfocusNode.dispose();
     super.dispose();
   }
 
