@@ -108,6 +108,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
             child: Column(
               children: <Widget>[
                 TextFormField(
+                  initialValue: _initValues["title"],
                   decoration: const InputDecoration(
                     labelText: "Title",
                   ),
@@ -132,6 +133,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   },
                 ),
                 TextFormField(
+                  initialValue: _initValues["price"],
                   decoration: const InputDecoration(
                     labelText: "Price",
                   ),
@@ -167,6 +169,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   },
                 ),
                 TextFormField(
+                  initialValue: _initValues["description"],
                   decoration: const InputDecoration(
                     labelText: "Description",
                   ),
@@ -219,6 +222,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                     ),
                     Expanded(
                       child: TextFormField(
+                        initialValue: _initValues["imageUrl"],
                         decoration: const InputDecoration(
                           labelText: "Image URL",
                         ),
