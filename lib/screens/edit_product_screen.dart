@@ -11,13 +11,13 @@ class EditProductScreen extends StatefulWidget {
 class _EditProductScreenState extends State<EditProductScreen> {
   final _priceFocusNode = FocusNode();
   final _descriptionFocusNode = FocusNode();
-  final _imageUrlCOntroller = TextEditingController();
+  final _imageUrlController = TextEditingController();
 
   @override
   void dispose() {
     _priceFocusNode.dispose();
     _descriptionFocusNode.dispose();
-    _imageUrlCOntroller.dispose();
+    _imageUrlController.dispose();
     super.dispose();
   }
 
@@ -78,26 +78,30 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 Row(
                   children: <Widget>[
                     Container(
-                      width: 100,
-                      height: 100,
-                      margin: const EdgeInsets.only(
-                        top: 8,
-                        right: 10,
-                      ),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          width: 1,
-                          color: Colors.grey,
+                        width: 100,
+                        height: 100,
+                        margin: const EdgeInsets.only(
+                          top: 8,
+                          right: 10,
                         ),
-                      ),
-                      child: Container(),
-                    ),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        child: _imageUrlController.text.isEmpty
+                            ? const Text("Enter a URL")
+                            : FittedBox(
+                                child: Image.network(_imageUrlController.text),
+                              )),
                     TextFormField(
                       decoration: const InputDecoration(
                         labelText: "Image URL",
                       ),
                       keyboardType: TextInputType.url,
                       textInputAction: TextInputAction.done,
+                      controller: _imageUrlController,
                     ),
                   ],
                 ),
