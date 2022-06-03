@@ -75,7 +75,19 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 // ),
                 Row(
                   children: <Widget>[
-                    Container(),
+                    Container(
+                      width: 100,
+                      height: 100,
+                      margin: const EdgeInsets.only(
+                        top: 8,
+                        right: 10,
+                      ),
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                        width: 1,
+                        color: Colors.grey,
+                      )),
+                    ),
                     TextFormField(),
                   ],
                 ),
