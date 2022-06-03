@@ -8,6 +8,7 @@ class UserProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final productsData = Provider.of<Products>(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text("Your Products"),
@@ -20,7 +21,7 @@ class UserProductsScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: ListView.builder(itemCount: , itemBuilder: itemBuilder),
+        child: ListView.builder(itemCount: productsData.items.length, itemBuilder: (_) => ),
       ),
     );
   }
