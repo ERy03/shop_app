@@ -16,7 +16,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
   final _imageUrlfocusNode = FocusNode();
   final _form = GlobalKey<FormState>();
   var _editedProduct = Product(
-    id: null,
+    id: "",
     title: "",
     price: 0,
     description: "",
@@ -47,6 +47,10 @@ class _EditProductScreenState extends State<EditProductScreen> {
 
   void _saveForm() {
     _form.currentState!.save();
+    print(_editedProduct.title);
+    print(_editedProduct.description);
+    print(_editedProduct.price);
+    print(_editedProduct.imageUrl);
   }
 
   @override
@@ -82,7 +86,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       price: _editedProduct.price,
                       description: _editedProduct.description,
                       imageUrl: _editedProduct.imageUrl,
-                      id: null,
+                      id: "",
                     );
                   },
                 ),
@@ -105,7 +109,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       price: double.parse(value!),
                       description: _editedProduct.description,
                       imageUrl: _editedProduct.imageUrl,
-                      id: null,
+                      id: "",
                     );
                   },
                 ),
@@ -122,7 +126,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       price: _editedProduct.price,
                       description: value!,
                       imageUrl: _editedProduct.imageUrl,
-                      id: null,
+                      id: "",
                     );
                   },
                 ),
@@ -169,7 +173,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                             price: _editedProduct.price,
                             description: _editedProduct.description,
                             imageUrl: value!,
-                            id: null,
+                            id: "",
                           );
                         },
                       ),
