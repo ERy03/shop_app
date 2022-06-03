@@ -78,23 +78,27 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 Row(
                   children: <Widget>[
                     Container(
-                        width: 100,
-                        height: 100,
-                        margin: const EdgeInsets.only(
-                          top: 8,
-                          right: 10,
+                      width: 100,
+                      height: 100,
+                      margin: const EdgeInsets.only(
+                        top: 8,
+                        right: 10,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1,
+                          color: Colors.grey,
                         ),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            width: 1,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        child: _imageUrlController.text.isEmpty
-                            ? const Text("Enter a URL")
-                            : FittedBox(
-                                child: Image.network(_imageUrlController.text),
-                              )),
+                      ),
+                      child: _imageUrlController.text.isEmpty
+                          ? const Text("Enter a URL")
+                          : FittedBox(
+                              child: Image.network(
+                                _imageUrlController.text,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                    ),
                     TextFormField(
                       decoration: const InputDecoration(
                         labelText: "Image URL",
