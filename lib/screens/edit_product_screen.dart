@@ -11,11 +11,13 @@ class EditProductScreen extends StatefulWidget {
 class _EditProductScreenState extends State<EditProductScreen> {
   final _priceFocusNode = FocusNode();
   final _descriptionFocusNode = FocusNode();
+  final _imageUrlCOntroller = TextEditingController();
 
   @override
   void dispose() {
     _priceFocusNode.dispose();
     _descriptionFocusNode.dispose();
+    _imageUrlCOntroller.dispose();
     super.dispose();
   }
 
