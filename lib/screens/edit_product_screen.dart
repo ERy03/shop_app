@@ -24,7 +24,11 @@ class _EditProductScreenState extends State<EditProductScreen> {
     super.dispose();
   }
 
-  void _updateImageUrl() {}
+  void _updateImageUrl() {
+    if (!_imageUrlfocusNode.hasFocus) {
+      setState(() {});
+    }
+  }
 
   @override
   void initState() {
