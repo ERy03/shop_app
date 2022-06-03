@@ -25,8 +25,6 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 TextFormField(
                   decoration: InputDecoration(
                     labelText: "Title",
-                    labelStyle: TextStyle(
-                        color: Theme.of(context).colorScheme.secondary),
                   ),
                   textInputAction: TextInputAction.next,
                   onFieldSubmitted: (_) {
@@ -36,8 +34,6 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 TextFormField(
                   decoration: InputDecoration(
                     labelText: "Price",
-                    labelStyle: TextStyle(
-                        color: Theme.of(context).colorScheme.secondary),
                   ),
                   textInputAction: TextInputAction.next,
                   keyboardType: TextInputType.number,
