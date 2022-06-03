@@ -37,7 +37,7 @@ class CartItem extends StatelessWidget {
       ),
       direction: DismissDirection.endToStart,
       confirmDismiss: (direction) {
-        showDialog(
+        return showDialog(
           context: context,
           builder: (context) => AlertDialog(
             title: const Text("Are you sure?"),
@@ -45,7 +45,9 @@ class CartItem extends StatelessWidget {
                 const Text("Do you want to remove the item from the cart?"),
             actions: <Widget>[
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pop(false);
+                },
                 child: const Text("No"),
               ),
               TextButton(
