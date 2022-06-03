@@ -99,6 +99,15 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   onFieldSubmitted: (_) {
                     FocusScope.of(context).requestFocus(_descriptionFocusNode);
                   },
+                  onSaved: (value) {
+                    _editedProduct = Product(
+                      title: _editedProduct.title,
+                      price: double.parse(value!),
+                      description: _editedProduct.description,
+                      imageUrl: _editedProduct.imageUrl,
+                      id: null,
+                    );
+                  },
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
