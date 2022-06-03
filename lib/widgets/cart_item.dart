@@ -40,9 +40,15 @@ class CartItem extends StatelessWidget {
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text("Are you sure?"),
-            content: Text("Do you want to remove the item from the cart?"),
-            actions: <Widget>[],
+            title: const Text("Are you sure?"),
+            content:
+                const Text("Do you want to remove the item from the cart?"),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () {},
+                child: const Text("No"),
+              )
+            ],
           ),
         );
       },
