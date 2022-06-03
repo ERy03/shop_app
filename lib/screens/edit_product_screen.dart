@@ -116,6 +116,15 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   maxLines: 3,
                   keyboardType: TextInputType.multiline,
                   focusNode: _descriptionFocusNode,
+                  onSaved: (value) {
+                    _editedProduct = Product(
+                      title: _editedProduct.title,
+                      price: _editedProduct.price,
+                      description: value!,
+                      imageUrl: _editedProduct.imageUrl,
+                      id: null,
+                    );
+                  },
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
