@@ -5,6 +5,8 @@ import '../providers/products.dart';
 import '../widgets/user_product_item.dart';
 
 class UserProductsScreen extends StatelessWidget {
+  static const routeName = "/user-products";
+
   const UserProductsScreen({Key? key}) : super(key: key);
 
   @override
