@@ -90,7 +90,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       ),
                       child: Container(),
                     ),
-                    TextFormField(),
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        labelText: "Image URL",
+                      ),
+                      keyboardType: TextInputType.url,
+                      textInputAction: TextInputAction.done,
+                    ),
                   ],
                 ),
               ],
