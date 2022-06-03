@@ -29,6 +29,9 @@ class _EditProductScreenState extends State<EditProductScreen> {
                         color: Theme.of(context).colorScheme.secondary),
                   ),
                   textInputAction: TextInputAction.next,
+                  onFieldSubmitted: (_) {
+                    FocusScope.of(context).requestFocus(_priceFocusNode);
+                  },
                 ),
                 TextFormField(
                   decoration: InputDecoration(
@@ -38,6 +41,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   ),
                   textInputAction: TextInputAction.next,
                   keyboardType: TextInputType.number,
+                  focusNode: _priceFocusNode,
                 ),
               ],
             ),
