@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/products.dart';
 
 class UserProductsScreen extends StatelessWidget {
   const UserProductsScreen({Key? key}) : super(key: key);
