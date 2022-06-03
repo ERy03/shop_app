@@ -62,6 +62,23 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   keyboardType: TextInputType.multiline,
                   focusNode: _descriptionFocusNode,
                 ),
+                // Expanded(
+                //     child: TextFormField(
+                //   decoration: InputDecoration(labelText: 'Image URL'),
+                //   keyboardType: TextInputType.url,
+                //   textInputAction: TextInputAction.done,
+                //   controller: _imageUrlController,
+                //   onEditingComplete: () {
+                //     setState(() {});
+                //   },
+                //  ),
+                // ),
+                Row(
+                  children: <Widget>[
+                    Container(),
+                    TextFormField(),
+                  ],
+                ),
               ],
             ),
           ),
