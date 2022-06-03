@@ -31,7 +31,9 @@ class _EditProductScreenState extends State<EditProductScreen> {
     }
   }
 
-  void _saveForm() {}
+  void _saveForm() {
+    _form.currentState!.save();
+  }
 
   @override
   void initState() {
