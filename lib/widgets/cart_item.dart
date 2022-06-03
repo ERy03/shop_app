@@ -51,7 +51,9 @@ class CartItem extends StatelessWidget {
                 child: const Text("No"),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pop(true);
+                },
                 child: const Text("Yes"),
               ),
             ],
