@@ -39,6 +39,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   keyboardType: TextInputType.number,
                   focusNode: _priceFocusNode,
                 ),
+                TextFormField(
+                  decoration: const InputDecoration(
+                    labelText: "Description",
+                  ),
+                  maxLines: 3,
+                  keyboardType: TextInputType.multiline,
+                ),
               ],
             ),
           ),
