@@ -83,10 +83,12 @@ class _EditProductScreenState extends State<EditProductScreen> {
                         right: 10,
                       ),
                       decoration: BoxDecoration(
-                          border: Border.all(
-                        width: 1,
-                        color: Colors.grey,
-                      )),
+                        border: Border.all(
+                          width: 1,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      child: Container(),
                     ),
                     TextFormField(),
                   ],
