@@ -1,6 +1,6 @@
 # shop_app
 
-A new Flutter project.
+<img width="495" alt="Screen Shot 2022-06-06 at 9 58 32" src="https://user-images.githubusercontent.com/76512208/172078265-ffc05b6c-158e-4fcf-85de-aba2e8d52f6a.png">
 
 ## Getting Started
 
